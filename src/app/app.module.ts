@@ -12,13 +12,16 @@ import { PerfilPageModule } from './perfil/perfil.module';
 import { Camera } from '@ionic-native/camera/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { PerfilAddPageModule } from './perfil-add/perfil-add.module';
+import { IonicStorageModule } from '@ionic/storage';
+
 
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, PerfilPageModule, PerfilAddPageModule],
+  imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, PerfilPageModule, PerfilAddPageModule,     IonicStorageModule.forRoot()
+  ],
   providers: [
     Camera,
     StatusBar,
